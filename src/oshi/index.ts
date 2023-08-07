@@ -26,11 +26,19 @@ toggleLogo?.addEventListener("click",() => {
 // component for the password form
 const passwordForm = document.createElement('form')
 const passwordInput = document.createElement('input')
+passwordForm.appendChild(passwordInput)
 passwordInput.type = "password"
 
 // component for checkbox
+const checkedBox = document.getElementById('checked')
 const checkBox = document.createElement('input')
 checkBox.type = "checkbox"
+checkBox.id = "checked"
+checkedBox?.addEventListener("click", ()=>{
+    passwordInput.type = "text"
+})
 
 // append the components to container
 container.appendChild(button1)
+container.appendChild(button2)
+container.appendChild(passwordForm)

@@ -3,12 +3,13 @@ const container = document.createElement('div')
 
 // logo for display toggle
 const logo = document.createElement('img')
+logo.src = "./public/vite.svg"
 
 // component for the counter button
 let counter = document.getElementById('counter')
 let count = 0
 const button1 = document.createElement('button')
-button1.value = `clicked ${count} times`
+button1.innerText = `clicked ${count} time/s`
 button1.id = "counter"
 counter?.addEventListener("click", ()=>{
     count++ 
@@ -30,11 +31,10 @@ passwordForm.appendChild(passwordInput)
 passwordInput.type = "password"
 
 // component for checkbox
-const checkedBox = document.getElementById('checked')
-const checkBox = document.createElement('input')
-checkBox.type = "checkbox"
-checkBox.id = "checked"
-checkedBox?.addEventListener("click", ()=>{
+const showPasswordType = document.getElementById('checked')
+const button3 = document.createElement('button')
+button3.id = "checked"
+showPasswordType?.addEventListener("click", ()=>{
     passwordInput.type = "text"
 })
 

@@ -29,6 +29,8 @@ const passwordInput = document.createElement('input')
 passwordInput.type = "password"
 
 // component for checkbox
+const checkBox = document.createElement('input')
+checkBox.type = "checkbox"
 
 // append the components to container
 container.appendChild(button1)
